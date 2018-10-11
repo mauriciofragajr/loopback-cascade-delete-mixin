@@ -146,8 +146,8 @@ var cascadeDeletes = function cascadeDeletes(modelId, Model, options) {
 
 exports.default = function (Model, options) {
   Model.observe('after save', function (ctx, next) {
-    if(!ctx.data.deletedAt){
-      next();
+    if(!ctx || !ctx.data || !ctx.data.deletedAt || !ctx.where || !ctx.where.and){
+      return next();
     }
     var name = idName(Model);
     var hasInstanceId = ctx.instance && ctx.instance[name];
