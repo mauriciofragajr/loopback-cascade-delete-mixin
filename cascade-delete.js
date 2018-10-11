@@ -145,12 +145,16 @@ var cascadeDeletes = function cascadeDeletes(modelId, Model, options) {
 };
 
 exports.default = function (Model, options) {
-  Model.observe('after delete', function (ctx) {
+  Model.observe('after save', function (ctx, next) {
+    if(!ctx.data.deletedAt){
+      next();
+    }
     var name = idName(Model);
     var hasInstanceId = ctx.instance && ctx.instance[name];
-    var hasWhereId = ctx.where && ctx.where[name];
+    var where = ctx.where.and[0];
+    var hasWhereId = where && where[name];
     var hasMixinOption = options && Array.isArray(options.relations);
-
+    
     if (!(hasWhereId || hasInstanceId)) {
       debug('Skipping delete for ', Model.definition.name);
       return _promise2.default.resolve();
