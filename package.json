@@ -1,5 +1,5 @@
 {
-  "name": "loopback-cascade-delete-mixin",
+  "name": "loopback-cascade-soft-delete-mixin",
   "version": "2.0.0",
   "description": "Loopback cascade delete mixin",
   "main": "index.js",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rocknrolla777/loopback-cascade-delete-mixin.git"
+    "url": "git+https://github.com/eduardolagoeiro/loopback-cascade-delete-mixin.git"
   },
   "keywords": [
     "loopback",
@@ -40,9 +40,9 @@
   "author": "Sergey Reus (reus.sergey14@gmail.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rocknrolla777/loopback-cascade-delete-mixin/issues"
+    "url": "https://github.com/eduardolagoeiro/loopback-cascade-delete-mixin/issues"
   },
-  "homepage": "https://github.com/rocknrolla777/loopback-cascade-delete-mixin#readme",
+  "homepage": "https://github.com/eduardolagoeiro/loopback-cascade-delete-mixin#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-add-module-exports": "^0.2.1",
