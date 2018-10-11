@@ -1,5 +1,5 @@
 {
-  "name": "loopback-cascade-soft-delete-mixin2",
+  "name": "loopback-cascade-soft-delete-mixin3",
   "version": "2.0.0",
   "description": "Loopback cascade delete mixin",
   "main": "index.js",
@@ -8,7 +8,6 @@
   },
   "scripts": {
     "compile": "gulp babel",
-    "prepublish": "npm run compile",
     "pretest": "eslint ./src/*.js --fix && gulp babel",
     "test": "mocha -R spec test",
     "outdated": "npm outdated --depth=0",
