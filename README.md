@@ -4,10 +4,11 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/rocknrolla777/loopback-cascade-delete-mixin.svg)](https://greenkeeper.io/)
 
+A loopback-cascade-delete fork, only work with another soft delete package like https://www.npmjs.com/package/loopback-softdelete-mixin4
 
  ##### IMPORTANT! Mixin object structure is changed. If you use "relationsConfig" key, please use 1.3.1 version  
 ```bash 
-npm install --save loopback-cascade-delete-mixin@1.3.1 
+npm install --save loopback-cascade-soft-delete-mixin@1.3.1 
 ```
 ##### or change object structure! (see below)
 
@@ -17,7 +18,7 @@ This module is designed for the [Strongloop Loopback](https://github.com/strongl
 ## install
 
 ```bash
-  npm install --save loopback-cascade-delete-mixin
+  npm install --save loopback-cascade-soft-delete-mixin
 ```
 Node.js v. > 6
 
@@ -36,7 +37,7 @@ Add the `mixins` property to your `server/model-config.json` like the following:
     ],
     "mixins": [
       "loopback/common/mixins",
-      "../node_modules/loopback-cascade-delete-mixin",
+      "../node_modules/loopback-cascade-soft-delete-mixin",
       "../common/mixins"
     ]
   }
